@@ -38,8 +38,8 @@ function getIds(items) {
  */
 function getCategories(items) {
   // TODO
-  const categories = items.map((item => item.category));
-  
+  const categories = items.map((item) => item.category);
+
   return categories;
 }
 
@@ -54,7 +54,9 @@ function getCategories(items) {
  */
 function getSkus(items) {
   // TODO
-  const sku = items.map((item) => `${item.id}#${item.name}#${item.name.length}`);
+  const sku = items.map(
+    (item) => `${item.id}#${item.name}#${item.name.length}`,
+  );
   return sku;
 }
 
@@ -64,7 +66,7 @@ function getSkus(items) {
  */
 function getFruits(items) {
   // TODO
-  const fruits = items.filter((item) => item.category === 'fruit');
+  const fruits = items.filter((item) => item.category === "fruit");
   return fruits;
 }
 
@@ -106,7 +108,10 @@ function countItems(items) {
 function getTotalCost(items) {
   // TODO
   const initialValue = 0;
-  const totalPrice = items.reduce((accumulator, currentValue) => accumulator + currentValue.price, initialValue);
+  const totalPrice = items.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.price,
+    initialValue,
+  );
   return totalPrice;
 }
 
@@ -117,6 +122,10 @@ function getTotalCost(items) {
 function getMostExpensiveItem(items) {
   // TODO
   const initialValue = 0;
-  const highestPrice = items.reduce((accumulator, currentValue) => currentValue.price > accumulator ? currentValue.price : accumulator, initialValue);
+  const highestPrice = items.reduce(
+    (accumulator, currentValue) =>
+      currentValue.price > accumulator ? currentValue.price : accumulator,
+    initialValue,
+  );
   return highestPrice;
 }
